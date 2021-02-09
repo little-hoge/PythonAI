@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css">
+	<title>画像判定AI</title>
+  </head>
+  <body>
+	<div id="container" class="top_container">
+		<header class="clearfix">
+			<div class="title">
+				<h1><a href="./"><img src="./static/img/googlelogo_color.png">画像判定AI</a></h1>
+			</div>
+			<div class="search">
+				<form action="./" method="post">
+					<p class="keyword">
+						<input type="text" name="keyword" placeholder="検索したいキーワードを入力" value="">
+					</p>
+					<p class="submit">
+						<input type="submit" value="検索して判定" class="btn">
+					</p>
+				</form>
+			</div>
+		</header>
+   		<div class="description">
+       		Google検索よりキーワードの画像をダウンロードし、「猿」か「猪」か「カラス」かを判定するAI<br>
+       		※PCスペックによりロードに時間がかかります。
+   		</div>
+
+
+
+		<footer>
+			<p class="copyright">kanda it school Copyright &copy; all rights reserved.</p>
+		</footer>
+	</div>
+	
+    <!-- loding -->
+    <div id="overlay">
+        <div class="cv-spinner">
+            <span class="spinner"></span>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    $(".btn").click(function(){
+        $("#overlay").fadeIn(500);
+    });
+    </script>
+  </body>
+</html>
